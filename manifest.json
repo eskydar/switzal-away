@@ -13,14 +13,20 @@
   "permissions": [
     "http://www.dumpert.nl/*"
   ],
+  "web_accessible_resources": [
+    "img/baby.png",
+    "img/deadbaby.png"
+  ],
   "content_scripts": [
     {
       "matches": [
-        "http://www.dumpert.nl/*"
+        "http://www.dumpert.nl/*",
+        "https://comments.dumpert.nl/*"
       ],
       "css": [
         "src/inject/inject.css"
-      ]
+      ],
+      "all_frames": true
     },
     {
       "matches": [

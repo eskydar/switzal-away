@@ -1,3 +1,46 @@
-/**
- * Place your custom CSS styles here.
- **/
+#kudt-switzal-options {
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid rgba(102,194,33,.3);
+    padding:0;
+    border-radius: 2px;
+}
+
+#kudt-switzal-options .option {
+    width: 25px;
+    height: 25px;
+    display: block;
+    padding: 0 5px;
+    border-right: 1px solid rgba(102,194,33,.3);
+    cursor: pointer;
+    position: relative;
+}
+
+#kudt-switzal-options .option.zwitsal {
+    background: url('chrome-extension://__MSG_@@extension_id__/img/baby.png') no-repeat center;
+}
+
+#kudt-switzal-options .option:hover {
+    background-color: rgba(102,194,33,.3);
+}
+
+#kudt-switzal-options .option.inactive::before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0 5px;
+    text-align: center;
+    font-size: 18px;
+}
+
+#kudt-switzal-options .option.zwitsal.inactive::before {
+    background: url('chrome-extension://__MSG_@@extension_id__/img/deadbaby.png') no-repeat center;
+}
+
+#kudt-switzal-options .option:last-child {
+    border-right: none;
+}
