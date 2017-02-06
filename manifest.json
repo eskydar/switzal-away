@@ -1,0 +1,36 @@
+{
+  "name": "Switzal away",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "This extension was created with the awesome extensionizr.com",
+  "homepage_url": "http://extensionizr.com",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "permissions": [
+    "http://www.dumpert.nl/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://www.dumpert.nl/*"
+      ],
+      "css": [
+        "src/inject/inject.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://comments.dumpert.nl/*"
+      ],
+      "js": [
+        "js/jquery.min.js",
+        "src/inject/inject.js"
+      ],
+      "all_frames": true
+    }
+  ]
+}
